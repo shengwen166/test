@@ -21,6 +21,8 @@ def zoho_sales_order():
     customer_name = sales_order.get("customer_name")
     total = sales_order.get("total")
 
+    print("📦 Incoming Zoho Sales Order JSON:", data) # to delete
+    
     lark_payload = {
         "approval_code": "SALES_ORDER_APPROVAL",
         "user_id": LARK_USER_ID,
