@@ -64,7 +64,7 @@ def lark_callback():
 
     # 1. 飞书 URL 校验请求
     if data.get("type") == "url_verification":
-        return jsonify({"challenge": data["challenge"]})
+        return jsonify({"challenge": data.get("challenge")})
 
     # 启动后台线程异步处理，避免超时
     Thread(target=process_lark_data, args=(data,)).start()
