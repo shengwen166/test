@@ -36,6 +36,9 @@ def zoho_sales_order():
                 {"name": "Total", "value": str(total)}
             ]
         }
+
+        "form": json.dumps(form_data)  # ✅ fix: convert form dict to JSON string
+        
     }
 
     headers = {
